@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('checkout Code') {
+    stage('Checkout Code') {
       steps {
         git(url: 'https://github.com/kassa16/Learning_jenkin', branch: 'main')
       }
