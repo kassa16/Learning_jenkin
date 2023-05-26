@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('Log') {
-      steps {
-        sh 'ls -al'
+      parallel {
+        stage('Log') {
+          steps {
+            sh 'ls -al'
+          }
+        }
+
+        stage('parallel') {
+          steps {
+            sh 'echo "This is a test to show that I can run two or more steps in parallel." "'
+          }
+        }
+
       }
     }
 
