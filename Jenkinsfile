@@ -17,7 +17,7 @@ pipeline {
 
         stage('parallel') {
           steps {
-            sh 'echo "This is a test to show that I can run two or more steps in parallel." "'
+            sh 'echo "This is a test to show that I can run two or more steps in parallel." '
           }
         }
 
